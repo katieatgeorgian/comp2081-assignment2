@@ -1,0 +1,182 @@
+@charset "UTF-8";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    "a"
+    "b"
+    "c";
+}
+
+header {
+  grid-area: a;
+}
+
+header nav {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "o"
+    "p";
+}
+
+header nav div:first-of-type {
+  grid-area: o;
+}
+
+header nav div:last-of-type {
+  grid-area: p;
+}
+
+#mainMenu {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  grid-area: b;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    "d"
+    "e";
+}
+
+#intro {
+  grid-area: d;
+}
+
+#albums {
+  grid-area: e;
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(9, auto);
+  grid-template-areas:
+    "f"
+    "g"
+    "h"
+    "i"
+    "j"
+    "k"
+    "l"
+    "m"
+    "n";
+  justify-content: space-evenly;
+}
+
+#album1 {
+  grid-area: f;
+}
+#album2 {
+  grid-area: g;
+}
+#album3 {
+  grid-area: h;
+}
+#album4 {
+  grid-area: i;
+}
+#album5 {
+  grid-area: j;
+}
+#album6 {
+  grid-area: k;
+}
+#album7 {
+  grid-area: l;
+}
+#album8 {
+  grid-area: m;
+}
+#album9 {
+  grid-area: n;
+}
+
+.cardBtns {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+footer {
+  grid-area: c;
+  display: flex;
+  justify-content: space-between;
+}
+
+.show {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.show div:nth-of-type(1) {
+  width: 45%;
+}
+
+.show div:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+}
+
+.thumbnail {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  justify-content: center;
+}
+
+.thumbnail1 {
+  grid-row-start: 1;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.thumbnail2 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  justify-content: center;
+  align-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    /* max-width: 768px; */
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "a a a"
+      "b b b"
+      "c c c";
+  }
+
+  main {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+      "d d d"
+      "e e e";
+  }
+
+  #albums {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "f g h"
+      "i j k"
+      "l m n";
+  }
+
+  .albumGroup {
+    width: 290px;
+  }
+}
