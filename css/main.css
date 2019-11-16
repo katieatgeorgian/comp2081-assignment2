@@ -197,15 +197,19 @@ main {
 
 #albums {
   margin: auto;
-  width: 1024px;
+  /* width: 1024px; */
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
 
 .albumGroup {
   margin: 10px;
-  width: 30rem;
+  width: 400px;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.albumGroup img {
+  width: 400px;
 }
 
 .albumGroup p {
@@ -273,6 +277,12 @@ image {
 .thumbnail2 {
   color: white;
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .albumGroup img {
+    width: 300px;
+  }
 }
 
 /* ==========================================================================
