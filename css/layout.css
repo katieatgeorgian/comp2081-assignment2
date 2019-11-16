@@ -174,9 +174,10 @@ footer {
       "f g h"
       "i j k"
       "l m n";
+    grid-column-gap: 1.1em;
   }
 
   .albumGroup {
-    width: 290px;
+    width: 350px;
   }
 }
